@@ -1,18 +1,20 @@
-<div>
-  <h1>Beautiful To do List</h1>
-</div>
+<div class="body">
+  <div>
+    <h1>Beautiful To do List</h1>
+  </div>
 
-<form  [formGroup]="form">
-  <input type="text" formControlName="action" placeholder="Add a task">
-  <button (click)="onAdd()">Add</button>
-</form>
+  <form  [formGroup]="form">
+    <input type="text" formControlName="action" placeholder="Add a task">
+    <button (click)="onAdd()">Add</button>
+  </form>
 
-<div>
-  <h2>List without repeated:</h2>
-  <p *ngIf="!list || list.length == 0">Empty list</p>
-  <ul *ngIf="list.length > 0">
-    <ng-container *ngFor="let item of list; let i = index">
-      <li>{{item}} <button (click)="onDelete(i)">x</button></li>
-    </ng-container>
-  </ul>
+  <div>
+    <h2>List without repeated:</h2>
+    <p *ngIf="!list || list.length == 0">Empty list</p>
+    <ul *ngIf="list.length > 0">
+      <ng-container *ngFor="let item of list; let i = index">
+        <li>{{item}} <button (click)="onDelete(i)">x</button></li>
+      </ng-container>
+    </ul>
+  </div>
 </div>
