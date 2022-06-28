@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('open-space-angular-test');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('open-space-angular-test app is running!');
-  });
 });
