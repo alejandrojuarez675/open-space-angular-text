@@ -5,8 +5,8 @@ This project was generated for do a example of angular test with next issues:
 - Develop a todo list
 - Mustn't have repeated elements
 - Mustn't have empty elements
-- Must have a delete button
-- Must show a message when don't have any element in the list
+- Should have a delete function
+- Should show a message when don't have any element in the list
 - Have to make a backup on 
 ````
 POST - http://localhost:3000/todo-list/backup
