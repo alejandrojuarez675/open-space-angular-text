@@ -13,5 +13,5 @@ POST - http://localhost:3000/todo-list/backup
 body: ["pato", "gato"]
 ````
 - Have to follow the next template
-![alt text](src\assets\img\template-1.png)
-![alt text](src\assets\img\template-2.png)
+![alt text](https://raw.githubusercontent.com/alejandrojuarez675/open-space-angular-text/main/src/assets/img/template-1.png)
+![alt text](https://raw.githubusercontent.com/alejandrojuarez675/open-space-angular-text/main/src/assets/img/template-2.png)
