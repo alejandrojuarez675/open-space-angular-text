@@ -42,7 +42,9 @@ export class HomeWithBackupComponent implements OnInit {
   }
 
   startBackup() {
-    this.backupService.set(this.list);
+    setInterval(() => {
+      this.backupService.set(this.list);
+    }, 10000);
   }
 }
 

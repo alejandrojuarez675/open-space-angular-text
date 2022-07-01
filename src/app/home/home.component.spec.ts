@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { By } from '@angular/platform-browser';
 
 import { HomeComponent } from './home.component';
 
@@ -103,4 +104,13 @@ describe('HomeComponent', () => {
 
     expect(component.list.length).toEqual(listToPut.length - 1);
   });
+
+
+  // FIXME error on reading from html
+  // it('should show msg "empty list"', () => {
+  //   const msg = fixture.debugElement.query(By.css('#empty-list-msg'));
+  //   console.log('msg', msg);
+  //   expect(msg).not.toBeNull();
+
+  // });
 });
