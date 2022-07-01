@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-// import { timeInterval } from 'rxjs';
-// import { BackupService } from '../backup.service';
+import { BackupService } from '../backup.service';
 
 @Component({
   selector: 'app-home-with-backup',
@@ -17,10 +16,11 @@ export class HomeWithBackupComponent implements OnInit {
   });
 
   constructor(
-    // private backupService: BackupService,
+    private backupService: BackupService,
   ) { }
 
   ngOnInit(): void {
+    this.startBackup();
   }
 
   onAdd() {
@@ -40,4 +40,9 @@ export class HomeWithBackupComponent implements OnInit {
   onDelete(i: number) {
     this.list = this.list.filter((_value, index, _arr) => index !== i);
   }
+
+  startBackup() {
+    this.backupService.set(this.list);
+  }
 }
+
