@@ -21,6 +21,10 @@ export class HomeComponent implements OnInit {
 
   onAdd() {
     const value = this.form.get('action')?.value;
+    if (!value) {
+      alert(`write a task`)
+      return;
+    }
     if (!this.list.includes(value)) {
       this.list.push(value);
     } else {

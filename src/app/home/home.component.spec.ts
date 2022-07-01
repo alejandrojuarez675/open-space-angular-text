@@ -72,6 +72,21 @@ describe('HomeComponent', () => {
   });
 
 
+
+  it("mustn't allow add empty elements", () => {
+    spyOn(window, "alert");
+    expect(component.list).toEqual([]);
+    let actionControl = component.form.controls['action'];
+
+    actionControl.setValue("")
+    component.onAdd();
+
+    expect(component.list.length).toEqual(0);
+    expect(window.alert).toHaveBeenCalledWith('write a task');
+
+  });
+
+
   it("should have a delete function", () => {
     expect(component.list).toEqual([]);
 
